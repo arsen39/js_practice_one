@@ -118,3 +118,85 @@ function randomArrayFiller() {
   const arr = [1, 2, 3, 4, 5];
   const arrSlised = arr.slice(3);
 }
+
+// Дан массив [1, 2, 3, 4, 5]. С помощью метода splice преобразуйте массив в [1, 4, 5].
+
+{
+  const arr = [1, 2, 3, 4, 5];
+  arr.splice(1, 2);
+}
+
+// Дан массив [1, 2, 3, 4, 5]. С помощью метода splice запишите в новый массив элементы [2, 3, 4].
+
+{
+  const arr = [1, 2, 3, 4, 5];
+  const newArr = arr.splice(1, 3);
+}
+
+// Дан массив [1, 2, 3, 4, 5]. С помощью метода splice сделайте из него массив [1, 2, 3, 'a', 'b', 'c', 4, 5].
+
+{
+  const arr = [1, 2, 3, 4, 5];
+  arr.splice(3, 0, "a", "b", "c");
+}
+
+// Дан массив [1, 2, 3, 4, 5]. С помощью метода splice сделайте из него массив [1, 'a', 'b', 2, 3, 4, 'c', 5, 'e'].
+
+{
+  const arr = [1, 2, 3, 4, 5];
+  arr.splice(1, 0, "a", "b");
+  arr.splice(6, 0, "c");
+  arr.splice(9, 0, "e");
+}
+
+// Дан массив [3, 4, 1, 2, 7]. Отсортируйте его.
+
+{
+  const arr = [3, 4, 1, 2, 7];
+  arr.sort();
+}
+
+// Дан объект {js:'test', jq: 'hello', css: 'world'}. Получите массив его ключей.
+
+{
+  const obj = { js: "test", jq: "hello", css: "world" };
+  const arr = Object.keys(obj);
+}
+
+// Hеобходимо создать функцию hasElem, которая параметрами будет принимать массив и строку, и 
+// возвращать true, если строка есть в массиве, и false - если нет
+
+function hasElem (arr, string) {
+  for (let i = 0; i<arr.length; i++) {
+    if (arr[i] === string) {
+      return true;
+    }
+  }
+  return false;
+}
+
+// Дан массив с числами. Проверьте, что в этом массиве есть указанное число. 
+// Если есть - вернуть true, а если нет - вернуть false.
+
+function hasNumb (arr, numb) {
+  for (let i = 0; i<arr.length; i++) {
+    if (arr[i] === numb) {
+      return true;
+    }
+  }
+  return false;
+}
+
+// Дан массив с числами. Проверьте, есть ли в нем два одинаковых числа подряд. 
+// Если есть -  вернуть true, а если нет - вернуть false.
+
+function hasOverlap (arr) {
+  for (let i = 0; i<arr.length; i++) {
+    if (arr[i] === arr[i+1]) {
+      return true;
+    }
+  }
+  return false;
+}
+
+
